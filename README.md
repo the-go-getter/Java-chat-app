@@ -13,10 +13,10 @@
 * Team number 8  
 
 #### Team members:  
-* "Chuhan Zhang" <zhang.chuh@husky.neu.edu>  
-* "Arvindkumar Thiagarajan" <thiagarajan.ar@husky.neu.edu>  
-* "Yilin Xu" <xu.yilin@husky.neu.edu>  
-* "Chandupatla Vinay Reddy" <reddy.ch@husky.neu.edu>  
+* "Chuhan Zhang"
+* "Arvindkumar Thiagarajan"
+* "Yilin Xu" 
+* "Chandupatla Vinay Reddy"   
 
 ### <a name="live-demo"></a>Link to live system:
 * [Prattle application](http://128.31.27.184:8080/prattle/)  
