@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1 class="jumbotron">Welcome to Prattle!</h1>
+        <div class="row">
+            <div class="col-12" id="messenger">
+                <form>
+                    <div class="input-group col-12">
+                        <input type="text" class="form-control col-3" id="username" placeholder="Username" />
+                        <input type="password" class="form-control col-3" id="password" placeholder="Password" />
+
+                        <span class="input-group-btn col-2">
+
+                            <button type="button" class="btn btn-primary" onclick="connect();">Connect</button>
+                        </span>
+                    <span class="input-group-btn col-2">
+                            <button class="btn btn-info" type="button" id="showBtn"
+                                    onclick="showCommands();">Click here
+                                for help</button>
+                        </span>
+                </div>
+                <div>
+                    <h4>Notification</h4>
+                    <textarea readonly="true" class="form-control col-12" rows="10"
+                              id="log"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                             aria-orientation="vertical">
+                            <a class="nav-link" id="inviteMsg" data-toggle="pill"
+                               href="#inviteBoard"
+                               role="tab" aria-controls="inviteBoard"
+                               aria-selected="false">Invites</a>
+                            <a class="nav-link active" id="personalMsg" data-toggle="pill"
+                               href="#personalMsgBoard"
+                               role="tab" aria-controls="personalMsgBoard" aria-selected="true">Personal
+                                Messages</a>
+                        </div>
+                    </div>
+                    <div class="col-9 mb-3">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade" id="inviteBoard" role="tabpanel"
+                                 aria-labelledby="inviteMsg">
+                            </div>
+                            <div class="tab-pane fade show active" id="personalMsgBoard"
+                                 role="tabpanel"
+                                 aria-labelledby="personalMsg">
+                                    <textarea readonly="true" class="form-control col-12" rows="10"
+                                              id="personalMsgTxt"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group col-12">
+                    <input type="text" class="form-control col-8" id="msg" placeholder="Message"/>
+                    <span class="input-group-btn col-2">
+                            <button type="button" class="btn btn-primary"
+                                    onclick="send();">Send</button>
+                        </span>
+                </div>
+            </form>
+        </div>
+        <div class="d-none" id="commandInfo">
+            <button class="btn btn-danger" type="button" id="closeBtn" onclick="showCommands();">
+                Close help
+            </button>
+            <ul>
+                <strong>Send:</strong>
+                <li>"\createuser [User name]" to create a user</li>
+                <li>"\updateuser [User name]" to update a user</li>
+                <li>"\followuser [User name]" to follow a user</li>
+                <li>"\deleteuser [User name]" to delete a user</li>
+                <li>"\unfollowuser [User name]" to unfollow a user</li>
+                <li>"\creategroup [Group name]" to create group</li>
+                <li>"\inviteuser [Group name] [User name]" to invite user to group</li>
+                <li>"[Group name]/: [Message body]" to send group message</li>
+                <li>"[User name]:: [Message body]" to send private message to user</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="websocket.js"></script>
+
+</html>

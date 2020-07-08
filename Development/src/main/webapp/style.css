@@ -1,0 +1,16 @@
+h1{
+    text-align: center;
+}
+
+#password{
+    margin-left: 10px;
+}
+
+#log{
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+#closeBtn{
+    margin-bottom: 30px;
+}

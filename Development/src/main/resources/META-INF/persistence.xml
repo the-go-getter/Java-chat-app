@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+
+    <persistence-unit name="slackdata" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>com.neu.prattle.model.User</class>
+        <class>com.neu.prattle.model.Follow</class>
+        <class>com.neu.prattle.model.AbstractMessage</class>
+        <class>com.neu.prattle.model.Message</class>
+        <class>com.neu.prattle.model.ChatGroup</class>
+        <class>com.neu.prattle.model.GroupUser</class>
+        <class>com.neu.prattle.model.GroupUserId</class>
+        <class>com.neu.prattle.model.GroupMessage</class>
+        <class>com.neu.prattle.model.Privilege</class>
+        <class>com.neu.prattle.model.InviteMessage</class>
+        <properties>
+
+            <property name="eclipselink.weaving" value="static"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:mysql://fse.csspporvbto4.us-east-1.rds.amazonaws.com:3306/slack?autoReconnect=true&amp;useSSL=false" />
+            <property name="javax.persistence.jdbc.user" value="fse" />
+            <property name="javax.persistence.jdbc.password" value="CS5500TEAM8#" />
+
+            <!-- EclipseLink should create the database schema automatically -->
+            <property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
+            <property name="eclipselink.ddl-generation.output-mode" value="database" />
+        </properties>
+
+    </persistence-unit>
+</persistence>
