@@ -1,26 +1,16 @@
-### Read me
-
 # Chat Application  
 
-## Table of Contents  
-* [Team details](#team-details)  
-* [Link to live system](#live-demo)  
-* [Links to YouTube videos](#youtube)    
+This is the repository for Prattle chat developed using Java for backend, Websockets for communication, AWS for deployement, Bootstrap and jQuery for frontend.
 
-### <a name="team-details"></a>Team details
-
-#### Team number:
-* Team number 8  
-
-#### Team members:  
-* "Chuhan Zhang"
-* "Arvindkumar Thiagarajan"
-* "Yilin Xu" 
-* "Chandupatla Vinay Reddy"   
-
-### <a name="live-demo"></a>Link to live system:
-* [Prattle application](http://128.31.27.184:8080/prattle/)  
-
-### <a name="youtube"></a>Links to YouTube videos:
-* [Final Presentation](https://youtu.be/dj00ILHB3yc)  
+### <a name="youtube"></a>Links to demo videos:
 * [System demo](https://youtu.be/fQDUjuVkfzo)
+* [Final Presentation](https://youtu.be/dj00ILHB3yc)  
+ 
+#### Team members:  
+* "Arvindkumar Thiagarajan"
+* "Chandupatla Vinay Reddy" 
+* "Chuhan Zhang"
+* "Yilin Xu" 
+
+### <a name="live-demo"></a>Link to live system(Currently down due to server issues):
+* [Prattle application](http://128.31.27.184:8080/prattle/)  
